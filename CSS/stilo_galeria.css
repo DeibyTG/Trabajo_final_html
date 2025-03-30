@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(109, 139, 119);
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    left: 300px;
+    top:80px;
+    font-family: fantasy;
+    letter-spacing: 1px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    grid-template-areas: 
+        "my-foto1 my-foto2 my-foto3 my-foto4"
+        "my-foto5 my-foto6 my-foto7 my-foto8"
+        "my-foto9 my-foto10 my-foto11 my-foto12";
+    background: linear-gradient(to left,rgb(88, 116, 105),rgb(160, 187, 163));
+    opacity: 0.9;
+}
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+img{
+    width: 320px;
+    height: 250px;
+    margin: 5px;
+    padding: 10px;
+    overflow: hidden;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 2%;
+}
+
+/* .fotos{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.foto1{
+    grid-area: my-foto1;
+}
+.foto2{
+    grid-area: my-foto2;
+}
+.foto3{
+    grid-area: my-foto3;
+}
+.foto4{
+    grid-area: my-foto4;
+}
+.foto5{
+    grid-area:my-foto5;
+}
+.foto6{
+    grid-area: my-foto6;
+}
+.foto7{
+    grid-area:my-foto7;
+}
+.foto8{
+    grid-area: my-foto8;
+}
+.foto9{
+    grid-area: my-foto9;
+}
+.foto10{
+    grid-area: my-foto10;
+}
+.foto11{
+    grid-area: my-foto11;
+}
+.foto12{
+    grid-area:my-foto12;
+}
+
+a{
+    display: flex;
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+@media (max-width:872px){
+
+    body{
+        font-family: fantasy;       
+
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        left: -270px;
+        top: 150px;
+        overflow: hidden;
+    }
+
+    img{
+        /* width: 320px;
+        height: 250px;
+        margin: 5px;
+        padding: 10px;
+        overflow: hidden;
+        text-align: center; */
+        border: 3px solid black;
+        border-radius: 2%;
+    }
+
+    aside{
+        display: flex;
+        position: absolute;
+        left: -270px;
+        top: -90px;
+    }
+
+    header{
+        display: flex;
+        position: absolute;
+        left: -210px;
+        top: 50px;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,182 @@
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+     "my-header"
+     "my-main";
+    background-image: url(/IMAGENES/foto-fondo-one\ piece.jpg);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+    grid-area: my-header;
+}
+.titulo{
+    text-transform: uppercase;
+    border: 3px solid black;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+main{
+    grid-area: my-main;
+}
+
+form{ 
+    padding: 5px;
+    display: grid;
+    height: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "nombre"
+        "email"
+        "telefono"
+        "more-info"
+        "terminos-condiciones"
+        "opciones"
+        "reset";
+}
+
+.formulario-datos{
+    text-align: center;
+    margin: 10px;   
+    border: 1px solid black;
+    border-radius: 10%;
+    background: linear-gradient(to left ,rgb(11, 68, 85) ,rgb(209, 184, 184));
+    width: 30%;
+    height: 100%;
+    padding: 50px;
+    margin: auto;
+    opacity: 0.9;
+
+}
+
+.formulario-datos input{
+    margin: 1px;
+    padding:5px ;
+}
+
+textarea{
+    margin: 5px;
+}
+
+.nombre{
+    grid-area: nombre;
+    padding:  5px;
+    word-spacing: 230px;
+}
+
+.email{
+    grid-area: email;
+    padding: 5px;
+    word-spacing:244px ;
+}
+
+.telefono{
+    grid-area: telefono;
+    padding: 5px;
+    word-spacing: 225px;
+}
+
+.more-info{
+    grid-area: more-info;
+    margin-top: auto;
+    margin-bottom: auto;
+    bottom: 100px;
+    word-spacing: 10px;
+}
+
+.terminos-condiciones{
+    grid-area:terminos-condiciones;
+}
+
+
+.opciones{
+    grid-area: opciones;
+}
+
+.reset{
+    grid-area: reset;
+}
+
+aside{
+    display: flex;
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    font-size: 40px;
+}
+
+aside a{
+    color: black;
+    text-transform: uppercase;
+}
+
+@media (max-width:872px){
+
+    body{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 20% 70% 10%;
+        grid-template-areas: 
+         "my-header"
+         "my-main"
+         "my-principal";
+        background-image: url(/IMAGENES/foto-fondo-one\ piece.jpg);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    aside{
+        grid-area: my-principal;
+        text-align: center;
+        font-size: 30px;
+        padding:20px;
+    }
+
+    a{
+        color: black;
+    }
+
+    form{ 
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "nombre"
+            "email"
+            "telefono"
+            "more-info"
+            "terminos-condiciones"
+            "opciones"
+            "reset";
+            overflow: hidden;
+    }
+
+    .formulario-datos input{
+        margin: 0;
+        padding:0 ;
+    }
+
+    .formulario-datos{
+        text-align: center;
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 10%;
+        background: linear-gradient(to left ,rgb(223, 237, 241) ,rgb(70, 160, 202));
+        opacity: 0.5;
+        margin-top: 5px;
+    
+    }
+
+}
+

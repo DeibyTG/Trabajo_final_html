@@ -1,0 +1,335 @@
+
+body{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto 75% 10%;
+    grid-template-areas: 
+        "my-header my-header"
+        "my-nav my-nav"
+        "my-article my-aside"
+        "my-footer my-footer";
+    gap: 5px;
+    padding: 5px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+header{
+    grid-area: my-header;
+    border: 1px solid black;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: auto;
+    margin-bottom: auto;
+    background:repeating-linear-gradient(rgb(255, 255, 255),rgb(126, 100, 100));
+}
+
+nav{
+    grid-area: my-nav;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+        "my-personajes my-enemigos my-formulario my-galeria my-ubicacion";
+    padding: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    border: 1px solid black;
+}
+
+    nav summary:hover{
+        background-color: rgb(62, 170, 111);
+        text-transform: uppercase;
+    }
+
+    nav a:hover{
+        background-color: rgb(131, 55, 19);
+        text-transform: uppercase;
+    }
+
+        .personajes{
+            grid-area: my-personajes;
+        }
+
+        .opciones-desplegable-personajes-principales a{
+            border: 1px solid rgb(16, 73, 75);
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            margin: 3px;
+            font-size: medium;
+            color: black;
+        }
+
+        .opciones-desplegable-personajes-principales a:hover{
+            background-color: rgb(53, 116, 116);
+            text-transform: uppercase;
+        }
+
+        .enemigos{
+            grid-area: my-enemigos;
+        }
+
+        .opciones-desplegable-enemigos a{
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            margin: 3px;
+            font-size: medium;
+            color: black;
+        }
+
+        .opciones-desplegable-enemigos a:hover{
+            background-color: rgb(53, 116, 116);
+            text-transform: uppercase;
+        }
+
+        .formulario{
+            grid-area: my-formulario;
+        }
+
+        .formulario a{
+            color: black;
+        }
+
+        .galeria{
+            grid-area: my-galeria;
+        }
+
+        .galeria a{
+            color: black;
+        }
+
+        .ubiacion{
+            grid-area: my-ubicacion;
+        }
+
+        .ubiacion a{
+            color: black;
+        }
+
+article{
+    grid-area: my-article;
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 40% 40%;
+    grid-template-areas: 
+        "my-principales my-principales"
+        "my-lufy my-zoro"
+        "my-sanji my-sanji";
+    
+}
+
+    article h3{
+        margin: 5px;
+    }
+
+        .principales{
+            margin: 5px;
+            grid-area: my-principales;
+            background:rgb(186, 186, 196);
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .lufy{
+            grid-area: my-lufy;
+            border: 1px solid black;
+            background:linear-gradient(to right, rgb(250, 75, 75),brown);
+        }
+        
+            .info-lufy{
+                margin: 10px;
+            }
+            
+            .foto-lufy{
+                display: flex;
+                position: absolute;
+                left: 30px    ;
+            }
+            
+        .zoro{
+            grid-area: my-zoro;
+            background:linear-gradient(to left,green, white);
+            border: 1px solid black;
+        }
+        
+            .info-zoro{
+                margin: 10px;
+            }
+            
+            .foto-zoro{
+                display: flex;
+                position: absolute;
+                left: 590px;
+            }
+
+        .sanji{
+            grid-area: my-sanji;
+            background:linear-gradient(yellow,white);
+        }
+        
+            .info-sanji{
+                margin: 10px;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            
+            .foto-sanji{
+                display: flex;
+                position: absolute;
+                left: 25px;
+            }
+
+aside{
+    grid-area: my-aside;
+    background:radial-gradient(rgb(130, 60, 196),rgb(51, 42, 42));
+    border: 1px solid black;
+    
+}
+
+    aside p{
+        margin: 10px;
+        }
+
+    aside img{
+        margin:10px;
+    }
+
+    aside h4{
+        margin: 5px;
+    }
+
+footer{
+    grid-area: my-footer;
+    background-color: rgb(170, 101, 101);
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 33.3% 33.33% 33.3%;
+    grid-template-rows: 20% 90%;
+    grid-template-areas: 
+        "my-rrss my-face my-insta"
+        "my-info-footer my-info-footer my-info-footer"
+}
+
+    .rrss{
+        grid-area: my-rrss;
+        text-align: right;
+        margin: -15px;
+    }
+
+    .link-face{
+        grid-area: my-face;
+        text-align: center;
+    }
+
+    .link-insta{
+        grid-area: my-insta;
+        text-align: center;
+        
+    }
+
+    .info-footer{
+        grid-area: my-info-footer;
+        margin: 10px;
+        text-align: center;
+    }
+
+    footer a{
+        color: black;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+@media (max-width:871px){
+    body{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 3% auto 70% 45% auto;
+    grid-template-areas: 
+        "my-header"
+        "my-nav"
+        "my-article"
+        "my-aside"
+        "my-footer";
+    gap: 5px;
+    padding: 5px;
+    }
+
+
+    header{
+        grid-area: my-header;
+        border: 1px solid black;
+        font-size: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background:repeating-linear-gradient(rgb(255, 0, 0),rgb(192, 107, 107));
+        width: 100%;
+    }
+
+    nav{
+        grid-area: my-nav;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "my-personajes" 
+            "my-enemigos" 
+            "my-formulario" 
+            "my-galeria";
+        padding: 1px;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    article{
+        grid-area: my-article;
+        border: 3px solid black;
+        height: auto;
+        width: auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 5% auto;
+        grid-template-areas: 
+            "my-principales"
+            "my-lufy"
+            "my-zoro"
+            "my-sanji";
+        
+    }
+
+    details {
+        display: block;
+    }
+
+    details[open] summary ~ * {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .foto-zoro{
+        display: flex;
+        position: absolute;
+        left: 30px;
+    }
+
+   .info-sanji{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    left: 30px;
+   }
+
+   .foto-sanji{
+    display: block;
+    display: flex;
+    position: absolute;
+    left: 30px;
+   }
+
+}
