@@ -15,7 +15,7 @@ body{
      "my-nav"
      "my-main"
      "my-footer";
-    background-image: url(/IMAGENES/foto-fondo-one\ piece.jpg);
+    background-image: url(IMAGENES/foto-fondo-one\ piece.jpg);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 

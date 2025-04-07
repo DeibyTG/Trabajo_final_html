@@ -158,8 +158,8 @@ article{
             
             .foto-lufy{
                 display: flex;
-                position: absolute;
-                left: 30px    ;
+                /* position: absolute; */
+                left: 30px;
             }
             
         .zoro{
@@ -174,7 +174,7 @@ article{
             
             .foto-zoro{
                 display: flex;
-                position: absolute;
+                /* position: absolute; */
                 left: 590px;
             }
 
@@ -261,7 +261,7 @@ footer{
     body{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 3% auto 70% 45% auto;
+    grid-template-rows: 3% 10% 70% 45% auto;
     grid-template-areas: 
         "my-header"
         "my-nav"
