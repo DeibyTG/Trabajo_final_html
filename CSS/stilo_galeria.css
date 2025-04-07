@@ -4,16 +4,82 @@
 
 body{
     background-color: rgb(109, 139, 119);
-    display: flex;
+    /* display: flex;
     position: absolute;
     flex-direction: column;
     left: 300px;
-    top:80px;
+    top:80px; */
     font-family: fantasy;
     letter-spacing: 1px;
+    display: grid;
+    grid-template-columns: 100%;;
+    grid-template-rows: 10% 80% 15%;
+    grid-template-areas:
+    "my-nav"
+    "my-main"
+    "my-footer";
 }
 
+nav{
+    grid-area: my-nav;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+        "my-main  my-formulario my-ubicacion";
+    padding: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgb(137, 124, 150);
+}
+
+nav a{
+    color: black;
+}
+
+    nav summary:hover{
+        background-color: rgb(62, 170, 111);
+        text-transform: uppercase;
+    }
+
+    nav a:hover{
+        background-color: rgb(131, 55, 19);
+        text-transform: uppercase;
+    }
+
+        .main{
+            grid-area: my-main;
+            color: black;
+        }
+
+        .formulario{
+            grid-area: my-formulario;
+        }
+
+        .formulario a{
+            color: black;
+        }
+
+        .galeria{
+            grid-area: my-galeria;
+        }
+
+        .galeria a{
+            color: black;
+        }
+
+        .ubiacion{
+            grid-area: my-ubicacion;
+        }
+
+        .ubiacion a{
+            color: black;
+        }
+
 main{
+    grid-area:my-main;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 33.3% 33.3% 33.3%;
@@ -41,10 +107,11 @@ img{
     border-radius: 2%;
 }
 
-/* .fotos{
+.fotos{
     display: flex;
     justify-content: space-between;
-} */
+    padding: 15px;
+}
 
 .foto1{
     grid-area: my-foto1;
@@ -83,15 +150,14 @@ img{
     grid-area:my-foto12;
 }
 
-a{
-    display: flex;
-    position: absolute;
-    top: 5px;
-    left: 0px;
-    color: black;
-    font-size: 30px;
-    text-decoration: none;
+
+
+footer{
+    grid-area: my-footer;
+    display: inline-block;
+    padding: 15px;
 }
+
 
 @media (max-width:872px){
 

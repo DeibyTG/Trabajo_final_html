@@ -12,13 +12,111 @@ header{
     border-radius: 6% 2%;
     overflow: hidden;
     box-sizing: content-box;
-    width: 500px;
+    width: 400px;
+    height: 100px;
     display: flex;
+    position: absolute;
+    top: 250px;
 
 }
 main{
     padding: 25px;
+    display: flex;
+    position: absolute;
+    top: 350px;
 }
+
+nav{
+    grid-area: my-nav;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+        "my-formulario my-main my-ubicacion";
+    padding: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    border: 1px solid black;
+    height: 30px;
+    background-color: rgb(120, 151, 151);
+}
+nav summary:hover{
+    background-color: rgb(62, 170, 111);
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    background-color: rgb(131, 55, 19);
+    text-transform: uppercase;
+}
+
+    .personajes{
+        grid-area: my-personajes;
+    }
+
+    .opciones-desplegable-personajes-principales a{
+        border: 1px solid rgb(16, 73, 75);
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin: 3px;
+        font-size: medium;
+        color: black;
+    }
+
+    .opciones-desplegable-personajes-principales a:hover{
+        background-color: rgb(53, 116, 116);
+        text-transform: uppercase;
+    }
+
+    .enemigos{
+        grid-area: my-enemigos;
+    }
+
+    .opciones-desplegable-enemigos a{
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin: 3px;
+        font-size: medium;
+        color: black;
+    }
+
+    .opciones-desplegable-enemigos a:hover{
+        background-color: rgb(53, 116, 116);
+        text-transform: uppercase;
+    }
+
+    .formulario{
+        grid-area: my-formulario;
+    }
+
+    .formulario a{
+        color: black;
+    }
+
+    .galeria{
+        grid-area: my-galeria;
+    }
+
+    .galeria a{
+        color: black;
+    }
+
+    .ubiacion{
+        grid-area: my-ubicacion;
+    }
+
+    .ubiacion a{
+        color: black;
+    }
+
+    .main a{
+        color: black;
+    }
+
 
 aside{
     display: flex;
@@ -27,6 +125,8 @@ aside{
     top: 145px;
     left: 500px;
     text-transform: uppercase;
+    height: 100px;
+    width: 300px;
     
 }
 
@@ -37,18 +137,53 @@ section{
     top: 145px;
     left: 1100px;
     text-transform: uppercase;
-    
+    width: 250px;
 }
 
-a{
-    display: flex;
+footer{
     position: absolute;
-    top: 15px;
-    left: 1700px;
-    color: black;
-    font-size: 30px;
-    text-decoration: none;
+    bottom: 15px;
+    grid-area: my-footer;
+    background-color: rgb(170, 101, 101);
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 33.3% 33.33% 33.3%;
+    grid-template-rows: 20% 90%;
+    grid-template-areas: 
+        "my-rrss my-face my-insta"
+        "my-info-footer my-info-footer my-info-footer"
 }
+
+    .rrss{
+        grid-area: my-rrss;
+        text-align: right;
+        margin: -15px;
+    }
+
+    .link-face{
+        grid-area: my-face;
+        text-align: center;
+    }
+
+    .link-insta{
+        grid-area: my-insta;
+        text-align: center;
+        
+    }
+
+    .info-footer{
+        grid-area: my-info-footer;
+        margin: 10px;
+        text-align: center;
+    }
+
+    footer a{
+        color: black;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 
 @media (max-width:872px){
 

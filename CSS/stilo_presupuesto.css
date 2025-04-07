@@ -6,11 +6,15 @@
 
 body{
     display: grid;
+    margin: auto;
+    gap: 15px;
     grid-template-columns: 100%;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 13% 5% 65% 201;
     grid-template-areas: 
      "my-header"
-     "my-main";
+     "my-nav"
+     "my-main"
+     "my-footer";
     background-image: url(/IMAGENES/foto-fondo-one\ piece.jpg);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -27,8 +31,68 @@ header{
     text-align: center;
 }
 
-main{
+
+nav{
+    grid-area: my-nav;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+        "my-main  my-galeria my-ubicacion";
+    padding: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgb(137, 124, 150);
+}
+
+    nav summary:hover{
+        background-color: rgb(62, 170, 111);
+        text-transform: uppercase;
+    }
+
+    nav a:hover{
+        background-color: rgb(131, 55, 19);
+        text-transform: uppercase;
+    }
+
+        .main{
+            grid-area: my-main;
+            color: black;
+        }
+
+        .formulario{
+            grid-area: my-formulario;
+        }
+
+        .formulario a{
+            color: black;
+        }
+
+        .galeria{
+            grid-area: my-galeria;
+        }
+
+        .galeria a{
+            color: black;
+        }
+
+        .ubiacion{
+            grid-area: my-ubicacion;
+        }
+
+        .ubiacion a{
+            color: black;
+        }
+
+
+.main{
     grid-area: my-main;
+}
+
+.main a{
+    color: black;
 }
 
 form{ 
@@ -121,6 +185,49 @@ aside a{
     color: black;
     text-transform: uppercase;
 }
+
+footer{
+    grid-area: my-footer;
+    background-color: rgb(170, 101, 101);
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 33.3% 33.33% 33.3%;
+    grid-template-rows: 20% 90%;
+    grid-template-areas: 
+        "my-rrss my-face my-insta"
+        "my-info-footer my-info-footer my-info-footer"
+}
+
+    .rrss{
+        grid-area: my-rrss;
+        text-align: right;
+        margin: -15px;
+    }
+
+    .link-face{
+        grid-area: my-face;
+        text-align: center;
+    }
+
+    .link-insta{
+        grid-area: my-insta;
+        text-align: center;
+        
+    }
+
+    .info-footer{
+        grid-area: my-info-footer;
+        margin: 10px;
+        text-align: center;
+    }
+
+    footer a{
+        color: black;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 
 @media (max-width:872px){
 

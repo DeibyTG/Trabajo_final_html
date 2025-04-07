@@ -27,15 +27,20 @@ header{
 nav{
     grid-area: my-nav;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    /* grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 100%;
     grid-template-areas: 
-        "my-personajes my-enemigos my-formulario my-galeria my-ubicacion";
+        "my-personajes my-enemigos my-formulario my-galeria my-ubicacion"; */
+        grid-template-columns: 33.3% 33.3% 33.3%;
+        grid-template-rows: 100%;
+        grid-template-areas: 
+            "my-formulario my-galeria my-ubicacion";
     padding: 5px;
     margin-top: auto;
     margin-bottom: auto;
     text-align: center;
     border: 1px solid black;
+    height: 30px;
 }
 
     nav summary:hover{
@@ -122,6 +127,12 @@ article{
         "my-sanji my-sanji";
     
 }
+
+    img{
+        height: 100px;
+        display: flex;
+        position: static;
+    }
 
     article h3{
         margin: 5px;
@@ -282,7 +293,8 @@ footer{
             "my-personajes" 
             "my-enemigos" 
             "my-formulario" 
-            "my-galeria";
+            "my-galeria"
+            "my-ubicacion";
         padding: 1px;
         text-align: center;
         border: 1px solid black;
