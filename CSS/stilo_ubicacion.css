@@ -151,7 +151,8 @@ footer{
     grid-template-rows: 20% 90%;
     grid-template-areas: 
         "my-rrss my-face my-insta"
-        "my-info-footer my-info-footer my-info-footer"
+        "my-info-footer my-info-footer my-info-footer";
+    width: 100%;
 }
 
     .rrss{
