@@ -258,7 +258,7 @@ footer{
     }
 
 
-@media (max-width:871px){
+/* @media (max-width:871px){
     body{
     display: grid;
     grid-template-columns: 100%;
@@ -345,4 +345,4 @@ footer{
     left: 30px;
    }
 
-}
+} */
